@@ -1,0 +1,10 @@
+local map = vim.api.nvim_set_keymap
+local default_opts = { noremap = true, silent = true }
+local cmd = vim.cmd
+
+-- nvim-tree
+map('n', '<C-b>', ':NvimTreeToggle<CR>', default_opts     ) -- open/close
+map('i', 'jj', '<Esc>', default_opts)
+map('v', 'aa', '<Esc>', default_opts)
+map('n', '<C-h>', '<C-w>h', default_opts)
+map('n', '<C-l>', '<C-w>l', default_opts)
