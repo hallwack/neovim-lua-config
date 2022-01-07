@@ -7,19 +7,33 @@ local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
 
+local colors = {
+  bg       = '#262626',
+  fg       = '#ffffff',
+  yellow   = '#ffaf00',
+  cyan     = '#008080',
+  lightblue= '#5cb6f8',
+  green    = '#619955',
+  orange   = '#FF8800',
+  violet   = '#a9a1e1',
+  magenta  = '#c678dd',
+  blue     = '#0a7aca',
+  red      = '#f44747',
+}
+
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
 	sections = { "error", "warn" },
 	symbols = { error = " ", warn = " " },
-	colored = false,
+	colored = true,
 	update_in_insert = false,
 	always_visible = true,
 }
 
 local diff = {
 	"diff",
-	colored = false,
+	colored = true,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   cond = hide_in_width
 }
@@ -65,7 +79,73 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "onedark",
+		theme = {
+      normal = {
+        a = {
+          fg = colors.blue,
+          bg = colors.bg
+        },
+        b = {
+          fg = colors.fg,
+          bg = colors.blue
+        },
+        x = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        },
+        y = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        }
+      },
+      insert = {
+        a = {
+          fg = colors.green,
+          bg = colors.bg
+        },
+        b = {
+          fg = colors.fg,
+          bg = colors.green
+        },
+        x = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        },
+        y = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        }
+      },
+      visual = {
+        a = {
+          fg = colors.magenta,
+          bg = colors.bg,
+          gui = "bold"
+        },
+        b = {
+          fg = colors.fg,
+          bg = colors.magenta
+        },
+        x = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        },
+        y = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        }
+      },
+      inactive = {
+        a = {
+          fg = colors.blue,
+          bg = colors.bg
+        },
+        c = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        }
+      },
+    },
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "dashboard", "NvimTree", "Outline" },

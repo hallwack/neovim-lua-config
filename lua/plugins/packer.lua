@@ -61,9 +61,11 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"
 
   use "jose-elias-alvarez/null-ls.nvim"
-  use 'Mofiqul/vscode.nvim'
+  use "Mofiqul/vscode.nvim"
 
-  use 'nvim-lualine/lualine.nvim'
+  use "nvim-lualine/lualine.nvim"
+
+  use "lewis6991/gitsigns.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
