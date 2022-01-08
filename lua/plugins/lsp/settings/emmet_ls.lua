@@ -1,7 +1,3 @@
 return {
-  settings = {
-    emmet_ls = {
-      filetypes = { "html", "javascript.react", "jsx" }
-    }
-  }
+  filetypes = { "html", "css", "javascriptreact", "jsx", "javascript.jsx" }
 }

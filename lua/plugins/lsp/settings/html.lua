@@ -1,7 +1,3 @@
 return {
-  settings = {
-    html = {
-      filetypes = {"html", "javascript.react", "jsx"}
-    }
-  }
+  filetypes = { "html", "javascriptreact", "jsx", "javascript.jsx" },
 }

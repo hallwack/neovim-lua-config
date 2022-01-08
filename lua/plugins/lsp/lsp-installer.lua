@@ -11,20 +11,20 @@ lsp_installer.on_server_ready(function(server)
 		capabilities = require("plugins.lsp.handlers").capabilities,
 	}
 
-	 if server.name == "html" then
+  if server.name == "html" then
 	 	local html_opts = require("plugins.lsp.settings.html")
 	 	opts = vim.tbl_deep_extend("force", html_opts, opts)
-	 end
+  end
 
-   if server.name == "sumneko_lua" then
+  if server.name == "sumneko_lua" then
 	 	local lua_opts = require("plugins.lsp.settings.sumneko_lua")
 	 	opts = vim.tbl_deep_extend("force", lua_opts, opts)
-	 end
+  end
 
-   if server.name == "emmet_ls" then
+  if server.name == "emmet_ls" then
 	 	local emmet_opts = require("plugins.lsp.settings.emmet_ls")
 	 	opts = vim.tbl_deep_extend("force", emmet_opts, opts)
-	 end
+  end
 
 	-- This setup() function is exactly the same as lspconfig's setup function.
 	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
