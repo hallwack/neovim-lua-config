@@ -10,4 +10,5 @@ require('plugins.lsp')
 require("plugins.lualine")
 require("plugins.gitsigns")
 require("plugins.telescope")
+require("plugins.comment")
 
