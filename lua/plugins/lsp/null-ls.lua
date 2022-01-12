@@ -11,7 +11,7 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi" } }),
+		formatting.prettier,
     formatting.dart_format,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.stylua,

@@ -12,4 +12,5 @@ require("plugins.gitsigns")
 require("plugins.telescope")
 require("plugins.comment")
 require("plugins.presence")
+require("plugins.bufferline")
 
