@@ -12,3 +12,8 @@ map('n', '<C-j>', '<C-w>j', default_opts)
 map('n', '<C-k>', '<C-w>k', default_opts)
 map('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown())<cr>", default_opts)
 map('n', '<leader>gr', "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown())<cr>", default_opts)
+map('n', '<A-h>', ':vertical resize -2<CR>', default_opts)
+map('n', '<A-l>', ':vertical resize +2<CR>', default_opts)
+map('n', '<A-j>', ':resize +2<CR>', default_opts)
+map('n', '<A-k>', ':resize -2<CR>', default_opts)
+
