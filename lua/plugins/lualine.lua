@@ -19,6 +19,7 @@ local colors = {
   magenta  = '#c678dd',
   blue     = '#0a7aca',
   red      = '#f44747',
+  blue_vsc = '#2188ff',
 }
 
 local diagnostics = {
@@ -88,6 +89,32 @@ lualine.setup({
         b = {
           fg = colors.fg,
           bg = colors.blue
+        },
+        c = {
+          fg = colors.bg,
+          bg = colors.blue_vsc
+        },
+        x = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        },
+        y = {
+          fg = colors.lightblue,
+          bg = colors.bg
+        }
+      },
+      command = {
+        a = {
+          fg = colors.orange,
+          bg = colors.bg
+        },
+        b = {
+          fg = colors.fg,
+          bg = colors.orange
+        },
+        c = {
+          fg = colors.bg,
+          bg = colors.blue_vsc
         },
         x = {
           fg = colors.lightblue,

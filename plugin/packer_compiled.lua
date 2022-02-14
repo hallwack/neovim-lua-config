@@ -79,6 +79,17 @@ _G.packer_plugins = {
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\2`\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
+    loaded = true,
+    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["aquarium-vim"] = {
+    loaded = true,
+    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/aquarium-vim",
+    url = "https://github.com/frenzyexists/aquarium-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -109,10 +120,25 @@ _G.packer_plugins = {
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -185,11 +211,6 @@ _G.packer_plugins = {
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -205,11 +226,6 @@ _G.packer_plugins = {
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
     url = "https://github.com/bluz71/vim-moonfly-colors"
   },
-  ["vscode-es7-javascript-react-snippets"] = {
-    loaded = true,
-    path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/vscode-es7-javascript-react-snippets",
-    url = "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
-  },
   ["vscode.nvim"] = {
     loaded = true,
     path = "/home/hallwack/.local/share/nvim/site/pack/packer/start/vscode.nvim",
@@ -222,10 +238,15 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\2`\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 if should_profile then save_profiles() end
 
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

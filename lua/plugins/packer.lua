@@ -33,11 +33,16 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+
+  -- Plugin Management
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+
+  -- Text Syntax
   use "nvim-treesitter/nvim-treesitter"
+
+  -- Tree-like File Explorer
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -45,41 +50,58 @@ return packer.startup(function(use)
     },
     config = function() require'nvim-tree'.setup {} end
   }
-  use { 'mangeshrex/uwu.vim' }
-  use "neovim/nvim-lspconfig"
-  use "windwp/nvim-autopairs"
 
+  -- LSP
+  use "neovim/nvim-lspconfig"
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
-  use "saadparwaiz1/cmp_luasnip"
-  use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"
-
   use "hrsh7th/cmp-nvim-lsp"
   use "williamboman/nvim-lsp-installer"
-
   use "jose-elias-alvarez/null-ls.nvim"
-  use "Mofiqul/vscode.nvim"
 
-  use "nvim-lualine/lualine.nvim"
-
-  use "lewis6991/gitsigns.nvim"
-
-  use "nvim-telescope/telescope.nvim"
-
+  -- Text Editing
+  use "windwp/nvim-autopairs"
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-  use "andweeb/presence.nvim"
-  use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
+  -- Snippets
+  use "saadparwaiz1/cmp_luasnip"
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+  -- use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
 
+  -- Colorscheme
+  use "Mofiqul/vscode.nvim"
+  use { 'mangeshrex/uwu.vim' }
   use "bluz71/vim-moonfly-colors"
+  use 'frenzyexists/aquarium-vim'
+  use "rebelot/kanagawa.nvim"
+  use "projekt0n/github-nvim-theme"
 
+  -- Statusline and Tabline
+  use "nvim-lualine/lualine.nvim"
   use { "alvarosevilla95/luatab.nvim", requires="kyazdani42/nvim-web-devicons" }
 
+  -- Indentline
   use "lukas-reineke/indent-blankline.nvim"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+
+  -- Startup
+  use {
+      'goolord/alpha-nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
