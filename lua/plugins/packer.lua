@@ -1,9 +1,9 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  PACKER_BOOTSTRAP = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
   print("Installing packer close and reopen Neovim...")
 end
 
@@ -23,12 +23,12 @@ end
 
 -- Have packer use a popup window
 packer.init({
-    display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
-      end
-    }
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'single' })
+    end
   }
+}
 )
 
 -- Install your plugins here
@@ -48,7 +48,7 @@ return packer.startup(function(use)
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
-    config = function() require'nvim-tree'.setup {} end
+    config = function() require 'nvim-tree'.setup {} end
   }
 
   -- LSP
@@ -81,10 +81,19 @@ return packer.startup(function(use)
   use "projekt0n/github-nvim-theme"
   use 'cpea2506/one_monokai.nvim'
   use 'kvrohit/rasmus.nvim'
+  use 'shaunsingh/nord.nvim'
+  use 'kvrohit/substrata.nvim'
+  use "LunarVim/darkplus.nvim"
+  use "LunarVim/onedarker.nvim"
 
   -- Statusline and Tabline
   use "nvim-lualine/lualine.nvim"
-  use { "alvarosevilla95/luatab.nvim", requires="kyazdani42/nvim-web-devicons" }
+  use { "alvarosevilla95/luatab.nvim", requires = "kyazdani42/nvim-web-devicons" }
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
+
 
   -- Indentline
   use "lukas-reineke/indent-blankline.nvim"
@@ -95,13 +104,14 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "andweeb/presence.nvim"
+
   -- Startup
   use {
-      'goolord/alpha-nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' },
-      config = function ()
-          require'alpha'.setup(require'alpha.themes.startify'.config)
-      end
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    end
   }
 
   -- Notifications

@@ -15,4 +15,5 @@ require("plugins.presence")
 require("plugins.bufferline")
 require("plugins.indentline")
 require("plugins.notifications")
+require("plugins.gps")
 

@@ -8,6 +8,8 @@ if not snip_status_ok then
   return
 end
 
+local icons = require "plugins.icons"
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -17,31 +19,32 @@ end
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-  Text = "",
-  Method = "m",
+  Text = icons.kind.Text,
+  Method = icons.kind.Method,
   Function = "",
   Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
-  Interface = "",
-  Module = "",
-  Property = "",
-  Unit = "",
+  Field = icons.kind.Field,
+  Variable = icons.kind.Variable,
+  Class = icons.kind.Class,
+  Interface = icons.kind.Interface,
+  Module = icons.kind.Module,
+  Property = icons.kind.Property,
+  Unit = icons.kind.Unit,
   Value = "",
   Enum = "",
-  Keyword = "",
+  Keyword = icons.kind.Keyword,
   Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "",
-  Event = "",
-  Operator = "",
-  TypeParameter = "",
+  Color = icons.kind.Color,
+  File = icons.kind.File,
+  Reference = icons.kind.Reference,
+  Folder = icons.kind.Folder,
+  EnumMember = icons.kind.EnumMember,
+  Constant = icons.kind.Constant,
+  Struct = icons.kind.Struct,
+  Event = icons.kind.Event,
+  Operator = icons.kind.Operator,
+  TypeParameter = icons.kind.TypeParameter,
+  Misc = icons.kind.Misc,
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 

@@ -4,11 +4,14 @@
 -- vim.cmd("colorscheme uwu")
 -- vim.cmd("colorscheme moonfly")
 
-vim.g.vscode_style = "dark"
-vim.cmd("colorscheme vscode")
+-- vim.g.vscode_style = "dark"
+-- vim.cmd("colorscheme vscode")
 
 -- vim.cmd("colorscheme aquarium")
 -- vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme nord")
+-- vim.cmd("colorscheme substrata")
+vim.cmd("colorscheme darkplus")
 
 -- Example config in Lua
 -- require("github-theme").setup({
