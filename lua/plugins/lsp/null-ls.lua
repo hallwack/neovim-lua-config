@@ -14,7 +14,9 @@ null_ls.setup({
 		formatting.prettier,
     formatting.dart_format,
     -- formatting.eslint,
-    diagnostics.eslint
+    diagnostics.eslint,
+    diagnostics.php,
+    -- diagnostics.python,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.stylua,
     -- diagnostics.flake8

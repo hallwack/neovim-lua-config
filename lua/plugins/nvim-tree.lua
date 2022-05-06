@@ -27,7 +27,7 @@ vim.g.nvim_tree_icons = {
 
 require('nvim-tree').setup {
   update_cwd = true,
-  view = { width = 32, auto_resize = true, side = "right" },
+  view = { width = 60, side='right' },
   filters = {
     dotfiles = true,
     custom = { '.git', 'node_modules', '.cache', '.bin' }

@@ -79,6 +79,8 @@ return packer.startup(function(use)
   use 'frenzyexists/aquarium-vim'
   use "rebelot/kanagawa.nvim"
   use "projekt0n/github-nvim-theme"
+  use 'cpea2506/one_monokai.nvim'
+  use 'kvrohit/rasmus.nvim'
 
   -- Statusline and Tabline
   use "nvim-lualine/lualine.nvim"
@@ -92,7 +94,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-
+  use "andweeb/presence.nvim"
   -- Startup
   use {
       'goolord/alpha-nvim',
@@ -101,6 +103,9 @@ return packer.startup(function(use)
           require'alpha'.setup(require'alpha.themes.startify'.config)
       end
   }
+
+  -- Notifications
+  use 'rcarriga/nvim-notify'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
