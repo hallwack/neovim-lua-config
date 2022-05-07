@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "williamboman/nvim-lsp-installer"
   use "jose-elias-alvarez/null-ls.nvim"
+  use { 'tami5/lspsaga.nvim' }
 
   -- Text Editing
   use "windwp/nvim-autopairs"
@@ -85,6 +86,7 @@ return packer.startup(function(use)
   use 'kvrohit/substrata.nvim'
   use "LunarVim/darkplus.nvim"
   use "LunarVim/onedarker.nvim"
+  use 'marko-cerovac/material.nvim'
 
   -- Statusline and Tabline
   use "nvim-lualine/lualine.nvim"
