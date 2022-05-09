@@ -98,7 +98,7 @@ gps.setup()
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = "neon",
     -- theme = {
     --     normal = {
     --       a = {

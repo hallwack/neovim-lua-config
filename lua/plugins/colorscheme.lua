@@ -18,11 +18,14 @@
 
 -- vim.cmd("colorscheme darkplus")
 
-vim.g.material_style = "darker"
-require('material').setup({
-  lualine_style = 'stealth'
-})
-vim.cmd("colorscheme material")
+vim.g.neon_style = "dark"
+vim.cmd("colorscheme neon")
+
+-- vim.g.material_style = "darker"
+-- require('material').setup({
+--   lualine_style = 'stealth'
+-- })
+-- vim.cmd("colorscheme material")
 
 -- require("github-theme").setup({
 --   theme_style = "dark_default",

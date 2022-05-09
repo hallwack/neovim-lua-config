@@ -87,6 +87,7 @@ return packer.startup(function(use)
   use "LunarVim/darkplus.nvim"
   use "LunarVim/onedarker.nvim"
   use 'marko-cerovac/material.nvim'
+  use 'rafamadriz/neon'
 
   -- Statusline and Tabline
   use "nvim-lualine/lualine.nvim"
